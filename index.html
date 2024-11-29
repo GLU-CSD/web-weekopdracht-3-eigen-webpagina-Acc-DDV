@@ -6,11 +6,14 @@
   <title>Parallax.js</title>
   <script src="https://cdn.jsdelivr.net/npm/parallax-js@3.1.0/dist/parallax.min.js"></script>
   <style>
-    body, html {
-        background-color: black;
+    /* body */
+     body,
+    html {
+      background-color: black;
       margin: 0;
+      width: 100vw;
       padding: 0;
-      height: 100%;
+      height: 100vh;
       overflow: hidden;
     }
     #scene {
@@ -19,6 +22,7 @@
       height: 100vh;
       overflow: hidden;
     }
+    /* Lagen */
     .layer {
       position: absolute;
       width: 100%;
@@ -26,7 +30,7 @@
     }
     .layer img {
       width: auto;
-      height: 1000px;
+      height: 1500px;
       margin-top: -50px;
       margin-left: 100px;
     }
@@ -34,19 +38,26 @@
       width: 200px;
       height: auto;
       margin-top: 100px;
-      margin-left: 1250px;
+      margin-left: 1050px;
     }
     .layer2 img{
       width: 200px;
       height: auto;
       margin-top: 100px;
-      margin-left: 1250px;
+      margin-left: 1050px;
     }
     .layer3 img{
       width: 700px;
       height: auto;
       margin-top: 300px;
       margin-left: 100px;
+
+    }
+    .layer4 img{
+      width: 50px;
+      height: auto;
+      margin-top: 660px;
+      margin-left: 430px;
 
     }
     .auraLayer img{
@@ -56,6 +67,7 @@
       margin-left: -750px;
 
     }
+    /* Zwarte balken */
     #bar1{
       height: 100%;
       width: 200px;
@@ -70,29 +82,27 @@
       background-color: black;
       position: absolute;
       z-index: 1;
-      margin-left: 75%;
+      margin-left: 85%;
     }
   </style>
-    <script defer>
-      const div=document.querySelector("#scene");
-      div.addEventListener("mousedown", function(){
-        console.log("aaaa")
-      })
-    </script>
 </head>
 <body>
+  <!-- balken inladen -->
   <div id="bar1"></div>
   <div id="bar2"></div>
+  <!-- scene inladen met parralax -->
   <div id="scene">
     <div class="layer" data-depth="0.1"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84dc13b7-a2e7-4b45-83ec-311e72e82900/dd22dav-356fba2c-5879-4d89-b2bb-d99962bf9c04.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg0ZGMxM2I3LWEyZTctNGI0NS04M2VjLTMxMWU3MmU4MjkwMFwvZGQyMmRhdi0zNTZmYmEyYy01ODc5LTRkODktYjJiYi1kOTk5NjJiZjljMDQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ULFN_B73K3WV7bYV71NHKtA4BebdxCtNa2fdSIkWV1E" alt="Layer 1"></div>
     <div class="layer1" data-depth="0.2"><img src="https://wallpapers.com/images/hd/vibrant-pink-super-saiyan-aura-z0b9wuekkb8k0hx1-2.png" alt="Layer 2"></div>
     <div class="layer2" data-depth="0.2"><img src="https://dokkan.wiki/assets/global/en/character/card/1027220/card_1027220_character.png" alt="Layer 2"></div>
     <div class="auraLayer" data-depth="0.3"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c556dc82-5d1c-4ce6-b6e2-03060f594908/del5ti3-1fb5c247-c746-4db9-bcc2-5d86de244ea3.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2M1NTZkYzgyLTVkMWMtNGNlNi1iNmUyLTAzMDYwZjU5NDkwOFwvZGVsNXRpMy0xZmI1YzI0Ny1jNzQ2LTRkYjktYmNjMi01ZDg2ZGUyNDRlYTMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.IQjhXlREY_w6rOzoL_2hdeBYIWGF6itnebw5llWdDAA" alt="Layer 1"></div>
-    <div class="layer3" data-depth="0.4"><a href="index2.html"></a><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/63501454-d2eb-423d-b1dc-95b44dd0d5fa/di7jpfq-37a4b143-b743-441b-8f8e-6cdd00e73822.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzYzNTAxNDU0LWQyZWItNDIzZC1iMWRjLTk1YjQ0ZGQwZDVmYVwvZGk3anBmcS0zN2E0YjE0My1iNzQzLTQ0MWItOGY4ZS02Y2RkMDBlNzM4MjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.NpFe67OEQNRhTCJiXUvU5HDrgiGYL_kdownMp6K4O_o" alt="Layer 3"></div>
- </div>
+    <div class="layer3" data-depth="0.4"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/63501454-d2eb-423d-b1dc-95b44dd0d5fa/di7jpfq-37a4b143-b743-441b-8f8e-6cdd00e73822.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzYzNTAxNDU0LWQyZWItNDIzZC1iMWRjLTk1YjQ0ZGQwZDVmYVwvZGk3anBmcS0zN2E0YjE0My1iNzQzLTQ0MWItOGY4ZS02Y2RkMDBlNzM4MjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.NpFe67OEQNRhTCJiXUvU5HDrgiGYL_kdownMp6K4O_o" alt="Layer 3"></div>
+    <div class="layer4" data-depth="0.4"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84dc13b7-a2e7-4b45-83ec-311e72e82900/dcrvehm-e37a913e-7a6f-43d9-b78a-daebe3f20e12.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg0ZGMxM2I3LWEyZTctNGI0NS04M2VjLTMxMWU3MmU4MjkwMFwvZGNydmVobS1lMzdhOTEzZS03YTZmLTQzZDktYjc4YS1kYWViZTNmMjBlMTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BJFb6Cvz-4G6VP3MKMIxIrevxffEX3hYUQoFpNdoiIg" alt="Layer 3"></div>
+  </div>
  
 
   <script>
+    //parralax
     // Initialize parallax
     var scene = document.getElementById('scene');
     var parallaxInstance = new Parallax(scene);
